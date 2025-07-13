@@ -47,8 +47,7 @@ export default function Projects() {
               title="Ecommerce Platform"
               description="A modern e-commerce web application where users can browse products, manage their cart, and place orders with ease."
               tech="Tech Stack: React, Bootstrap, Node.js, MongoDB."
-              ghLink="#"
-              demoLink="#"
+
             />
           </Col>
 
