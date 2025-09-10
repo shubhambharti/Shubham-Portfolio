@@ -1,0 +1,106 @@
+<svg width="100%" height="100%" viewBox="0 0 1000 550" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+   
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&amp;display=swap');
+            
+            .typing-text {
+                font-family: "Kode Mono", monospace;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            /* Animation to reveal and then hide text for the loop */
+            @keyframes type-line1 {
+                0% { width: 0; }
+                35% { width: 255px; } /* Finish typing */
+                90% { width: 255px; } /* Hold */
+                100% { width: 0; }     /* Reset */
+            }
+
+            @keyframes type-line2 {
+                0% { width: 0; }
+                40% { width: 0; }      /* Wait */
+                75% { width: 130px; }  /* Finish typing */
+                90% { width: 130px; }  /* Hold */
+                100% { width: 0; }     /* Reset */
+            }
+            
+            @keyframes blink {
+                50% { opacity: 0; }
+            }
+            
+            /* Animation to move the cursor in sync with the typing */
+            @keyframes move-cursor {
+                0% { transform: translate(20px, 35px); }
+                35% { transform: translate(275px, 35px); } /* End of line 1 */
+                40% { transform: translate(275px, 35px); } /* Pause */
+                41% { transform: translate(60px, 65px); }  /* Move to line 2 */
+                75% { transform: translate(190px, 65px); } /* End of line 2 */
+                90% { transform: translate(190px, 65px); } /* Hold */
+                100% { transform: translate(20px, 35px); } /* Reset */
+            }
+
+            @keyframes progress {
+                0% { width: 0; }
+                80% { width: 360px; }
+                100% { width: 0; }
+            }
+
+            #clip-rect1 { animation: type-line1 1.15s steps(26) infinite; }
+            #clip-rect2 { animation: type-line2 1.15s steps(12) infinite; }
+            
+            #cursor {
+                animation: blink 0.5s infinite, move-cursor 1.15s infinite;
+            }
+            #progress-bar {
+                animation: progress 1.15s linear infinite;
+            }
+        </style>
+        
+        <!-- Separate clipping paths for each line for independent animation -->
+        <clipPath id="clip1"><rect id="clip-rect1" x="0" y="0" width="0" height="25"/></clipPath>
+        <clipPath id="clip2"><rect id="clip-rect2" x="0" y="0" width="0" height="25"/></clipPath>
+    </defs>
+    
+    <!-- Background Image -->
+    
+ 
+    <!-- Animated background particles -->
+    <circle r="1.5" fill="#D4AF37" opacity="0.6">
+        <animate attributeName="cx" values="0;1000;0" dur="15s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="50;450;50" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1" fill="#695618ff" opacity="0.4">
+        <animate attributeName="cx" values="1000;0;1000" dur="12s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="500;100;500" dur="8s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- This group centers all the typing animation content -->
+    <g transform="translate(320, 219)">
+        <!-- Line 1 -->
+        <g transform="translate(20, 15)" clip-path="url(#clip1)">
+            <text y="20" class="typing-text">
+                <tspan fill="#ffffff">&lt; Hello from </tspan>
+                <tspan fill="#c770f0">SHUBHAM</tspan>
+                <tspan fill="#ffffff"> /&gt;</tspan>
+            </text>
+        </g>
+        
+        <!-- Line 2 -->
+        <g transform="translate(60, 45)" clip-path="url(#clip2)">
+            <text y="20" class="typing-text">
+                <tspan fill="#ffffff">&lt;</tspan>
+                <tspan fill="#6d20c5d7">Loading...</tspan>
+                <tspan fill="#ffffff"> /&gt;</tspan>
+            </text>
+        </g>
+
+        <!-- The cursor element -->
+        <rect id="cursor" width="2" height="18" y="-18" rx="1" fill="#6d20c5d7" />
+
+        <!-- Progress bar at bottom -->
+        <rect id="progress-bar" x="20" y="110" width="0" height="2" fill="#c770f0" opacity="0.8"/>
+    </g>
+</svg>
+
