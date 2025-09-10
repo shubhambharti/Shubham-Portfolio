@@ -11,6 +11,8 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
   AiFillPhone,
+  AiOutlineWhatsApp,
+  AiFillMail
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -87,13 +89,30 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+            <Nav.Item className="d-flex">
               <Nav.Link
+                target="_blank"
                 as={Link}
                 to="tel:9811312508"
                 onClick={() => updateExpanded(false)}
               >
-                <AiFillPhone style={{ marginBottom: "2px" }} /> Call Me
+                <AiFillPhone style={{ marginBottom: "2px" }} />
+              </Nav.Link>
+              <Nav.Link
+                target="_blank"
+                as={Link}
+                to="https://wa.me/+919811312508"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineWhatsApp style={{ marginBottom: "2px" }} />
+              </Nav.Link>
+              <Nav.Link
+                target="_blank"
+                as={Link}
+                to="mailto:shubhambharti711@gmail.com"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiFillMail style={{ marginBottom: "2px" }} />
               </Nav.Link>
             </Nav.Item>
 
