@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
+  AiOutlineCopyright
 } from "react-icons/ai";
 import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
@@ -64,7 +64,7 @@ function Footer() {
       </Row>
       <Row>
         <Col md="12" className="footer-copywright">
-          <h3>Designed and Developed by Shubham Bharti</h3>
+          <h3><AiOutlineCopyright /> Designed and Developed by Shubham Bharti</h3>
         </Col>
       </Row>
     </Container>
