@@ -139,10 +139,16 @@ button:focus {
   transform: rotate(-135deg) !important;
   opacity: 0.9 !important;
 }
+@media (max-width: 767px) {
+  .navbar-toggler {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+}
 
 @media (max-width: 767px) {
   .navbar {
-    padding: 1rem 2rem !important;
+    padding: 1rem 0 !important;
     font-size: 1.4rem !important;
     background-color: #181a27 !important;
   }
@@ -203,6 +209,21 @@ button:focus {
 
 .navbar-nav .nav-item a:hover::after {
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .contact-icons-mobile {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+    margin-bottom: 1rem !important;
+  }
+  .contact-icons-mobile .nav-link {
+    padding-right: 0.8rem !important;
+    padding-left: 0.8rem !important;
+    font-size: 1.7em !important;
+  }
 }
 
 /* --------- */
@@ -606,6 +627,104 @@ button:focus {
     padding-top: 0 !important;
   }
 }
+/* --------- */
+/* About Toggle Buttons - WORKING VERSION */
+/* --------- */
+.about-toggle-buttons {
+  position: relative !important;
+  z-index: 1000 !important;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-toggle-buttons .btn {
+  transition: all 0.3s ease !important;
+  border-radius: 25px !important;
+  padding: 8px 20px !important;
+  font-weight: 500 !important;
+  margin: 0 5px !important;
+  cursor: pointer !important;
+  position: relative !important;
+}
+
+.about-toggle-buttons .btn-primary {
+  background: linear-gradient(45deg, #623686, #934cce) !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(147, 76, 206, 0.3) !important;
+}
+
+.about-toggle-buttons .btn-outline-primary {
+  color: var(--imp-text-color) !important;
+  border: 2px solid var(--imp-text-color) !important;
+  background: transparent !important;
+}
+
+.about-toggle-buttons .btn-outline-primary:hover {
+  background: var(--imp-text-color) !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(199, 112, 240, 0.3) !important;
+}
+
+.about-toggle-buttons .btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(147, 76, 206, 0.4) !important;
+}
+
+/* Education and Experience Items Styling */
+.education-item,
+.experience-item {
+  border-left: 3px solid var(--imp-text-color);
+  padding-left: 20px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.education-item::before,
+.experience-item::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--imp-text-color);
+  box-shadow: 0 0 0 3px rgba(199, 112, 240, 0.2);
+}
+
+.education-item h4,
+.experience-item h4 {
+  margin-bottom: 8px;
+  font-size: 1.3em;
+}
+
+.education-item h5,
+.experience-item h5 {
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+@media (max-width: 767px) {
+  .about-toggle-buttons .btn {
+    margin: 5px 3px !important;
+    padding: 6px 15px !important;
+    font-size: 0.9em !important;
+  }
+
+  .education-item,
+  .experience-item {
+    padding-left: 15px;
+  }
+
+  .education-item::before,
+  .experience-item::before {
+    left: -6px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
 /* --------- */
 /* Resume */
 /* --------- */

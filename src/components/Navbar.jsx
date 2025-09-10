@@ -41,6 +41,7 @@ function NavBar() {
       <Container>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
+          className="ms-auto"
           onClick={() => {
             updateExpanded(expand ? false : "expanded");
           }}
@@ -89,7 +90,7 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item className="d-flex">
+            <Nav.Item className="d-flex contact-icons-mobile">
               <Nav.Link
                 target="_blank"
                 as={Link}
@@ -115,6 +116,7 @@ function NavBar() {
                 <AiFillMail style={{ marginBottom: "2px" }} />
               </Nav.Link>
             </Nav.Item>
+
 
             <Nav.Item className="fork-btn">
               <Button
