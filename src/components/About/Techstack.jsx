@@ -6,11 +6,15 @@ import {
   DiMongodb,
   DiGithub,
   DiJava,
-  DiMysql
+  DiMysql,
+  DiAws,
 } from "react-icons/di";
 import {
   SiNextdotjs,
-  SiBootstrap
+  SiBootstrap,
+  SiNestjs,
+  SiTailwindcss,
+  SiAntdesign
 } from "react-icons/si";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -22,15 +26,19 @@ export default function Techstack() {
   }, []);
 
   const techItems = [
-    { icon: <DiJavascript1 />, name: "JavaScript" },
+    { icon: <SiNestjs />, name: "Nest.js" },
     { icon: <DiNodejs />, name: "Node.js" },
+    { icon: <DiJavascript1 />, name: "JavaScript" },
     { icon: <DiReact />, name: "React" },
-    { icon: <DiMongodb />, name: "MongoDB" },
     { icon: <SiNextdotjs />, name: "Next.js" },
-    { icon: <SiBootstrap />, name: "Bootstrap" },
-    { icon: <DiGithub />, name: "GitHub" },
-    { icon: <DiJava />, name: "Java" },
     { icon: <DiMysql />, name: "MySQL" },
+    { icon: <DiMongodb />, name: "MongoDB" },
+    { icon: <SiTailwindcss />, name: "Tailwind" },
+    { icon: <SiBootstrap />, name: "Bootstrap" },
+    { icon: <SiAntdesign />, name: "Ant Design" },
+    { icon: <DiGithub />, name: "GitHub" },
+    { icon: <DiAws />, name: "AWS" },
+    { icon: <DiJava />, name: "Java" },
   ];
 
   return (
