@@ -9,20 +9,20 @@ import Experience from "./Experience";
 import aboutImg from "../../Assets/about-img.jpg";
 import Toolstack from "./Toolstack";
 import Tilt from "react-parallax-tilt";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function About() {
   const [activeSection, setActiveSection] = useState("about");
 
   const renderActiveSection = () => {
     switch (activeSection) {
-      case "education":
-        return <Education />;
       case "experience":
         return <Experience />;
-      default:
+      case "education":
         return <Education />;
+      default:
+        return <Experience />;
     }
   };
 
@@ -56,20 +56,28 @@ function About() {
           {/* Toggle Buttons */}
           <div className="about-toggle-buttons">
             <Button
-              data-aos="fade-right" data-aos-delay={1} data-aos-anchor-placement="top-center"
-              variant={activeSection === "education" ? "primary" : "outline-primary"}
-              onClick={() => setActiveSection("education")}
-              className="me-3 mb-2"
-            >
-              Education
-            </Button>
-            <Button
-              data-aos="fade-left" data-aos-delay={1} data-aos-anchor-placement="top-center"
-              variant={activeSection === "experience" ? "primary" : "outline-primary"}
+              data-aos="fade-left"
+              data-aos-delay={1}
+              data-aos-anchor-placement="top-center"
+              variant={
+                activeSection === "experience" ? "primary" : "outline-primary"
+              }
               onClick={() => setActiveSection("experience")}
               className="mb-2"
             >
               Experience
+            </Button>
+            <Button
+              data-aos="fade-right"
+              data-aos-delay={1}
+              data-aos-anchor-placement="top-center"
+              variant={
+                activeSection === "education" ? "primary" : "outline-primary"
+              }
+              onClick={() => setActiveSection("education")}
+              className="me-3 mb-2"
+            >
+              Education
             </Button>
           </div>
 
@@ -80,8 +88,8 @@ function About() {
         <Techstack />
         <Toolstack />
         <Github />
-      </Container >
-    </Container >
+      </Container>
+    </Container>
   );
 }
 

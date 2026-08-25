@@ -37,20 +37,35 @@ function Experience() {
               October 2025 – Present • Greater Noida, UP
             </p>
             <ul>
-              <li className="about-activity">
-                <ImPointRight /> Developed RTF portal/website using React.js,
-                Next.js, Tailwind CSS, and Node.js, implementing UI, dashboards,
-                authentication, and API integrations.
+              <li className="about-activity my-3">
+                <ImPointRight style={{ color: "var(--imp-text-color)" }} />{" "}
+                Developed RTF portal/website using Node.js, React.js, Next.js,
+                Tailwind CSS, implementing UI, dashboards, authentication,
+                authorization and API creation and integrations.
               </li>
-              <li className="about-activity">
-                <ImPointRight /> Optimized web performance, handled state
-                management with Redux-Saga, and enhanced backend APIs using
-                Node.js and PHP Laravel.
+              <li className="about-activity my-3">
+                <ImPointRight style={{ color: "var(--imp-text-color)" }} />{" "}
+                Integrated the Claude API into the internal portal to accelerate
+                employee workflows, enabling AI-driven comparison of multiple
+                policy quotations for smarter and faster decision-making.
               </li>
-              <li className="about-activity">
-                <ImPointRight /> Managed deployment, maintenance, and
-                collaborated with cross-functional teams to implement new
-                features and fix production issues.
+              <li className="about-activity my-3">
+                <ImPointRight style={{ color: "var(--imp-text-color)" }} />{" "}
+                Architected and maintained robust database schemas (MySQL),
+                optimizing complex queries to significantly reduce data
+                retrieval times and enhance overall system scalability.
+              </li>
+              <li className="about-activity my-3">
+                <ImPointRight style={{ color: "var(--imp-text-color)" }} />{" "}
+                Optimized web performance, handled state management with
+                Redux-Saga, and create backend APIs using Node.js and PHP
+                Laravel.
+              </li>
+              <li className="about-activity my-3">
+                <ImPointRight style={{ color: "var(--imp-text-color)" }} />{" "}
+                Managed deployment, maintenance, and collaborated with
+                cross-functional teams to implement new features and fix
+                production issues.
               </li>
             </ul>
           </div>
